@@ -26,6 +26,7 @@ import {
 } from './ui.js';
 
 import { renderCharts } from './charts.js';
+import { registerServiceWorker } from './pwa.js';
 
 // Application State
 let currentMode = 'weekly'; // 'weekly' or 'all'
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initApp() {
+  registerServiceWorker();
   setupEventListeners();
   populateCategoryDropdown('income');
   // Set default date input to today (local timezone)
