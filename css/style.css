@@ -1,6 +1,7 @@
 /* ==========================================================================
-   Kelola Uang — Flat Modern Dark UI (Linear / Vercel Style)
-   Zero gradients. Pure flat color. Sharp geometry. Strong typography.
+   Kelola Uang — Pastel Light UI (Logo-Matched)
+   Cornflower blue accent · Sky-blue backgrounds · Mint green · Gold.
+   Inspired by the DompetAri wallet logo palette.
    ========================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
@@ -9,35 +10,35 @@
    Design Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Backgrounds */
-  --bg-root: #0a0a0a;
-  --bg-surface: #111111;
-  --bg-raised: #1a1a1a;
-  --bg-overlay: #222222;
-  --bg-hover: #2a2a2a;
+  /* Backgrounds — soft sky-blue tinted whites (matches logo's blue circle) */
+  --bg-root: #eef4fd;
+  --bg-surface: #ffffff;
+  --bg-raised: #e8f1fb;
+  --bg-overlay: #dae9f8;
+  --bg-hover: #c9ddf4;
 
   /* Borders */
-  --border: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.14);
-  --border-focus: #6366f1;
+  --border: rgba(91, 138, 240, 0.14);
+  --border-light: rgba(91, 138, 240, 0.28);
+  --border-focus: #5b8af0;
 
-  /* Text */
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-tertiary: #52525b;
+  /* Text — warm navy (matches dark outline of logo) */
+  --text-primary: #1a2744;
+  --text-secondary: #4a6080;
+  --text-tertiary: #8aa3c2;
 
-  /* Accent — Indigo */
-  --accent: #6366f1;
-  --accent-hover: #818cf8;
-  --accent-muted: rgba(99, 102, 241, 0.12);
+  /* Accent — Cornflower Blue (logo's circle bg) */
+  --accent: #5b8af0;
+  --accent-hover: #3d6fd4;
+  --accent-muted: rgba(91, 138, 240, 0.12);
 
-  /* Semantic */
-  --income: #22c55e;
-  --income-muted: rgba(34, 197, 94, 0.1);
-  --expense: #f43f5e;
-  --expense-muted: rgba(244, 63, 94, 0.1);
-  --warning: #f59e0b;
-  --warning-muted: rgba(245, 158, 11, 0.1);
+  /* Semantic — mint green (logo money) + rose + golden amber (logo button) */
+  --income: #16a34a;
+  --income-muted: rgba(22, 163, 74, 0.1);
+  --expense: #e11d48;
+  --expense-muted: rgba(225, 29, 72, 0.1);
+  --warning: #c4780a;
+  --warning-muted: rgba(196, 120, 10, 0.1);
 
   /* Radius */
   --r-xs: 4px;
@@ -118,19 +119,19 @@ body {
 }
 
 .brand-icon {
-  width: 38px;
-  height: 38px;
-  border: 2px solid var(--text-primary);
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  overflow: hidden;
   flex-shrink: 0;
+  background: transparent;
 }
 
 .brand-icon img {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -242,20 +243,20 @@ body {
   text-transform: uppercase;
   color: var(--accent-hover);
   background: var(--accent-muted);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(91, 138, 240, 0.28);
   border-radius: var(--r-xs);
 }
 
 .badge.all-time {
   color: var(--income);
   background: var(--income-muted);
-  border-color: rgba(34, 197, 94, 0.2);
+  border-color: rgba(22, 163, 74, 0.3);
 }
 
 .badge.filter-active {
   color: var(--warning);
   background: var(--warning-muted);
-  border-color: rgba(245, 158, 11, 0.25);
+  border-color: rgba(196, 120, 10, 0.3);
   animation: pulse-badge 2s ease-in-out infinite;
 }
 
@@ -582,8 +583,8 @@ body {
   border-color: var(--border-focus);
 }
 .select-control option {
-  background: #1a1a1a;
-  color: #fff;
+  background: #eef4fd;
+  color: var(--text-primary);
 }
 
 /* Date Filter Row */
@@ -815,7 +816,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(26, 39, 68, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -930,13 +931,13 @@ body {
 
 .income-opt input[type="radio"]:checked + .type-btn {
   background: var(--income-muted);
-  border-color: rgba(34, 197, 94, 0.4);
+  border-color: rgba(22, 163, 74, 0.45);
   color: var(--income);
 }
 
 .expense-opt input[type="radio"]:checked + .type-btn {
   background: var(--expense-muted);
-  border-color: rgba(244, 63, 94, 0.4);
+  border-color: rgba(225, 29, 72, 0.45);
   color: var(--expense);
 }
 
@@ -979,7 +980,7 @@ body {
 }
 
 .form-input option {
-  background: var(--bg-raised);
+  background: #ffffff;
   color: var(--text-primary);
 }
 

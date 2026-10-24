@@ -79,7 +79,7 @@ function renderFlowChart(transactions, mode) {
         {
           label: 'Pemasukan',
           data: incomeData,
-          backgroundColor: '#22c55e',
+          backgroundColor: '#86efac',
           borderRadius: 4,
           barPercentage: 0.55,
           categoryPercentage: 0.75
@@ -87,7 +87,7 @@ function renderFlowChart(transactions, mode) {
         {
           label: 'Pengeluaran',
           data: expenseData,
-          backgroundColor: '#f43f5e',
+          backgroundColor: '#fda4af',
           borderRadius: 4,
           barPercentage: 0.55,
           categoryPercentage: 0.75
@@ -103,7 +103,7 @@ function renderFlowChart(transactions, mode) {
           position: 'top',
           align: 'end',
           labels: {
-            color: '#71717a',
+            color: '#4a6080',
             font: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: '600' },
             boxWidth: 10,
             usePointStyle: true,
@@ -112,10 +112,10 @@ function renderFlowChart(transactions, mode) {
           }
         },
         tooltip: {
-          backgroundColor: '#1a1a1a',
-          titleColor: '#ffffff',
-          bodyColor: '#a1a1aa',
-          borderColor: 'rgba(255,255,255,0.1)',
+          backgroundColor: '#ffffff',
+          titleColor: '#1a2744',
+          bodyColor: '#4a6080',
+          borderColor: 'rgba(91, 138, 240, 0.25)',
           borderWidth: 1,
           padding: 12,
           cornerRadius: 8,
@@ -130,13 +130,13 @@ function renderFlowChart(transactions, mode) {
         x: {
           grid: { display: false },
           border: { display: false },
-          ticks: { color: '#52525b', font: { size: 12 } }
+          ticks: { color: '#8aa3c2', font: { size: 12 } }
         },
         y: {
-          grid: { color: 'rgba(255,255,255,0.05)', drawTicks: false },
+          grid: { color: 'rgba(91, 138, 240, 0.07)', drawTicks: false },
           border: { display: false, dash: [4, 4] },
           ticks: {
-            color: '#52525b',
+            color: '#8aa3c2',
             font: { size: 12 },
             padding: 8,
             callback: function(val) {
@@ -181,7 +181,7 @@ function renderCategoryChart(transactions) {
   const dataValues = Object.values(catSums);
 
   const colors = [
-    '#6366f1', '#22c55e', '#f43f5e', '#f59e0b', '#06b6d4', '#ec4899', '#8b5cf6'
+    '#93bbf9', '#86efac', '#fda4af', '#fcd34d', '#67e8f9', '#f9c6a0', '#b8d4f8'
   ];
 
   if (dataValues.length === 0) {
@@ -191,7 +191,7 @@ function renderCategoryChart(transactions) {
         labels: ['Belum ada pengeluaran'],
         datasets: [{
           data: [1],
-          backgroundColor: ['rgba(255,255,255,0.05)'],
+          backgroundColor: ['rgba(91, 138, 240, 0.08)'],
           borderWidth: 0
         }]
       },
@@ -228,7 +228,7 @@ function renderCategoryChart(transactions) {
         legend: {
           position: 'bottom',
           labels: {
-            color: '#71717a',
+            color: '#4a6080',
             font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '600' },
             boxWidth: 10,
             usePointStyle: true,
@@ -237,10 +237,10 @@ function renderCategoryChart(transactions) {
           }
         },
         tooltip: {
-          backgroundColor: '#1a1a1a',
-          titleColor: '#ffffff',
-          bodyColor: '#a1a1aa',
-          borderColor: 'rgba(255,255,255,0.1)',
+          backgroundColor: '#ffffff',
+          titleColor: '#1a2744',
+          bodyColor: '#4a6080',
+          borderColor: 'rgba(91, 138, 240, 0.25)',
           borderWidth: 1,
           padding: 12,
           cornerRadius: 8,
